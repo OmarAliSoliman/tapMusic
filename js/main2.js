@@ -5,7 +5,9 @@ const load = document.querySelectorAll('.load span');
 const soundPlay = document.querySelectorAll('.sound-play');
 const music = document.querySelectorAll('.sound-play .sounds')
 const soundEffect = document.querySelectorAll('.sound-effect span');
-console.log(music);
+const playStop = document.querySelectorAll('#playStop');
+const icons = document.querySelectorAll('#playStop i');
+console.log(icons);
 const colors = [
     "#60d394",
     "#d36060",
@@ -43,13 +45,15 @@ function changeColor(index){
     load[index].style.animation = "load 1s infinite .8s ease";
 }
 
-soundPlay.forEach((soun,index)=>{
+playStop.forEach((soun,index)=>{
     soun.addEventListener('click',function () {
         if(music[index].paused){
             music[index].play();
+            playStop[index].innerHTML = "<i class='fas fa-pause-circle'></i>";
+            document.querySelectorAll('#playStop i')[index].style.color=colors[index];
         }else{
             music[index].pause();
+            playStop[index].innerHTML = "<i class='fas fa-play-circle'></i>";
         }
-        
     });
 });
