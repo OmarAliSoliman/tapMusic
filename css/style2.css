@@ -141,10 +141,6 @@ header h1{
     animation: soundEffect 1s infinite ease;
 }
 
-.sound-play{
-    cursor: pointer;
-}
-
 
 .sound-effect span:first-child{
     animation-delay: .1s;
@@ -169,6 +165,27 @@ header h1{
 .sound-effect span:nth-child(6){
     animation-delay: .11s;
     background-color:#60c2d3;
+}
+
+.sound-play i{
+    color: #fff;
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.sound-play h2{
+    padding: 0;
+    margin: 0;
+}
+
+.sound-play button{
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    margin-top: -20px;
+    cursor: pointer;
+    outline: 0;
 }
 
 @keyframes soundEffect{
